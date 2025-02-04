@@ -7,8 +7,6 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { Button } from "@/components/ui/button";
 import { useDispatch } from "react-redux";
-import { add } from "@/app/Redux/features/cartSlice";
-import Toastify from "@/app/cart/toastify";
 // import CustomerTestimonials from "@/components/AllReviews";
 // import Top_sell from "@/components/arrivals";
 // import { BreadcrumbCollapsed } from "@/components/Breadcrupm";
@@ -45,9 +43,7 @@ interface Iproducts {
     const [error, setError] = useState(false);
      const dispatch = useDispatch()
      
-     const handleadd = (cartItem:any)=>{
-         dispatch(add(cartItem))
-     }
+    
     useEffect(() => {
         const fetchProduct = async () => {
           try {
@@ -223,8 +219,8 @@ interface Iproducts {
             >
               <Plus />
             </button>
-            {/* <Button onClick={()=>handleadd(cartItem))} className="bg-black text-white w-[300px]">Add to Cart</Button> */}
-            <Toastify cartItem = {cartItem}/>
+            {/* <Button className="bg-black text-white w-[300px]">Add to Cart</Button> */}
+            {/* <Toastify cartItem = {cartItem}/> */}
           </div>
         </div>
       </div>
