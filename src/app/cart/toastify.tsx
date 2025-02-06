@@ -16,7 +16,6 @@ const handleadd = (cartItem:any)=>{
     dispatch(add(cartItem))
 }
 
-
     const notify = () => 
     toast.success('Product added Successfully!', {
       position: "bottom-right",
